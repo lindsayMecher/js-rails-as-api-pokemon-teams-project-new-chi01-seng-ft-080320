@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3000"
-const TRAINERS_URL = `${BASE_URL}/trainers`
-const POKEMONS_URL = `${BASE_URL}/pokemons`
+const TRAINERS_URL = `${BASE_URL}/api/v1/trainers`
+const POKEMONS_URL = `${BASE_URL}/api/v1/pokemons`
 const trainerCollectionDiv = document.getElementById('trainer-collection')
 
 let trainersData;
