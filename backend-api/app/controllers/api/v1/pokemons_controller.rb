@@ -15,7 +15,9 @@ class Api::V1::PokemonsController < ApplicationController
         if trainer.pokemons.count >= 6
             render json: {message: "Only 6 pokemon allowed on a trainer's team"}
         else 
-            pokemon = Pokemon.create(nickname: "pokepoke", species: "generic pokemon", trainer: trainer)
+            name = Faker::Name.first_name
+            species = Faker::Games::Pokemon.name
+            pokemon = Pokemon.create(nickname: name, species: species, trainer: trainer)
             if pokemon.save 
                 render json: pokemon
             else 
